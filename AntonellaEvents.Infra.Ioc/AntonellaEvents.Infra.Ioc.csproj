@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AntonellaEvents.Application\AntonellaEvents.Application.csproj" />
+    <ProjectReference Include="..\AntonellaEvents.Domain\AntonellaEvents.Domain.csproj" />
+    <ProjectReference Include="..\AntonellaEvents.Infra.Data\AntonellaEvents.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>
