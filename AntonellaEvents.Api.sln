@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Api", "AntonellaEvents.Api\AntonellaEvents.Api.csproj", "{8FFE16C5-DF44-49D5-840A-68CF6648EAD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Application", "AntonellaEvents.Application\AntonellaEvents.Application.csproj", "{7361924C-257D-4507-9F75-A1FBC8FF1D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Domain", "AntonellaEvents.Domain\AntonellaEvents.Domain.csproj", "{940AF634-D9E9-427F-A9E9-3DF5393D8F7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Infra.Data", "AntonellaEvents.Infra.Data\AntonellaEvents.Infra.Data.csproj", "{1CD50346-D10C-4DEB-988A-9C74E1519F25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Infra.Ioc", "AntonellaEvents.Infra.Ioc\AntonellaEvents.Infra.Ioc.csproj", "{0DCF688C-90A7-4E06-8D03-B8DF829F030E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FFE16C5-DF44-49D5-840A-68CF6648EAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFE16C5-DF44-49D5-840A-68CF6648EAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFE16C5-DF44-49D5-840A-68CF6648EAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFE16C5-DF44-49D5-840A-68CF6648EAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7361924C-257D-4507-9F75-A1FBC8FF1D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7361924C-257D-4507-9F75-A1FBC8FF1D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7361924C-257D-4507-9F75-A1FBC8FF1D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7361924C-257D-4507-9F75-A1FBC8FF1D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940AF634-D9E9-427F-A9E9-3DF5393D8F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940AF634-D9E9-427F-A9E9-3DF5393D8F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940AF634-D9E9-427F-A9E9-3DF5393D8F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940AF634-D9E9-427F-A9E9-3DF5393D8F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD50346-D10C-4DEB-988A-9C74E1519F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD50346-D10C-4DEB-988A-9C74E1519F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD50346-D10C-4DEB-988A-9C74E1519F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD50346-D10C-4DEB-988A-9C74E1519F25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DCF688C-90A7-4E06-8D03-B8DF829F030E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DCF688C-90A7-4E06-8D03-B8DF829F030E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DCF688C-90A7-4E06-8D03-B8DF829F030E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DCF688C-90A7-4E06-8D03-B8DF829F030E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93021F3F-C3BB-46E3-9BF5-877604209CA7}
+	EndGlobalSection
+EndGlobal
