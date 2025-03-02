@@ -30,7 +30,7 @@ namespace AntonellaEvents.Infra.Data.EntitiesConfiguration
 
 			builder.HasOne(e => e.Address)
 				.WithOne(a => a.Events) 
-				.HasForeignKey<Events>(e => e.AddresId)
+				.HasForeignKey<Events>(e => e.AddressId)
 				.IsRequired();
 
 			builder.HasQueryFilter(e => e.Active);

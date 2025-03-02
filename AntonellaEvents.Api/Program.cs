@@ -1,5 +1,7 @@
 using ADoJob.Infra.IoC;
+using AntonellaEvents.Infra.Data.Context;
 using AntonellaEvents.Infra.IoC;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+CreateAntonellaEventsReadContext(app);
+CreateAntonellaEventsWriteContext(app);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -28,3 +33,17 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+static void CreateAntonellaEventsWriteContext(WebApplication app)
+{
+	var serviceScope = app.Services.CreateScope();
+	var dataContext = serviceScope.ServiceProvider.GetService<AntonellaEventsWriteContext>();
+	dataContext?.Database.Migrate();
+}
+
+static void CreateAntonellaEventsReadContext(WebApplication app)
+{
+	var serviceScope = app.Services.CreateScope();
+	var dataContext = serviceScope.ServiceProvider.GetService<AntonellaEventsReadContext>();
+	dataContext?.Database.Migrate();
+}

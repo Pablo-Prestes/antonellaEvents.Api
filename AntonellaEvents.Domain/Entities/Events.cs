@@ -11,7 +11,7 @@ namespace AntonellaEvents.Domain.Entities
 		public DateTime EndDate { get; private set; }
 		public bool IsPublic { get; private set; }
 		public Address? Address { get; private set; }
-		public int AddresId { get; private set; }
+		public int AddressId { get; private set; }
 
 		public Events(string name, string description, DateTime startDate, DateTime endDate, bool isPublic, int addressId)
 		{
@@ -21,7 +21,7 @@ namespace AntonellaEvents.Domain.Entities
 			StartDate = startDate;
 			EndDate = endDate;
 			IsPublic = isPublic;
-			AddresId = addressId;
+			AddressId = addressId;
 		}
 
 		private void ValidateDomain(string name, string description, DateTime startDate, DateTime endDate, int addressId)

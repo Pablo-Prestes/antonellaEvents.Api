@@ -9,13 +9,20 @@ namespace AntonellaEvents.Infra.Data.Repository
 {
 	public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
 	{
-		protected readonly AntonellaEventsContext _context;
-		protected readonly DbSet<T> _dbSet;
+		private readonly AntonellaEventsWriteContext _writeContext;
+		private readonly AntonellaEventsReadContext _readContext;
+		private readonly DbSet<T> _writeDbSet;
+		private readonly DbSet<T> _readDbSet;
 
-		public GenericRepository(AntonellaEventsContext context)
+		public GenericRepository(
+			AntonellaEventsWriteContext writeContext,
+			AntonellaEventsReadContext readContext)
 		{
-			_context = context;
-			_dbSet = _context.Set<T>();
+			_writeContext = writeContext;
+			_readContext = readContext;
+
+			_writeDbSet = _writeContext.Set<T>();
+			_readDbSet = _readContext.Set<T>();
 		}
 
 		public async Task<T> PostAsync(T entity, string userId)
@@ -23,8 +30,8 @@ namespace AntonellaEvents.Infra.Data.Repository
 			try
 			{
 				entity.Post(userId);
-				await _dbSet.AddAsync(entity);
-				await _context.SaveChangesAsync();
+				await _writeDbSet.AddAsync(entity);
+				await _writeContext.SaveChangesAsync();
 				return entity;
 			}
 			catch (Exception ex)
@@ -38,8 +45,8 @@ namespace AntonellaEvents.Infra.Data.Repository
 			try
 			{
 				entity.Update(userId);
-				_dbSet.Update(entity);
-				await _context.SaveChangesAsync();
+				_writeDbSet.Update(entity);
+				await _writeContext.SaveChangesAsync();
 				return entity;
 			}
 			catch (Exception ex)
@@ -53,12 +60,11 @@ namespace AntonellaEvents.Infra.Data.Repository
 			try
 			{
 				var entity = await GetByIdAsync(id);
-				if (entity == null)
-					return null;
+				if (entity == null) return null;
 
 				entity.Delete(userId);
-				_dbSet.Update(entity);
-				await _context.SaveChangesAsync();
+				_writeDbSet.Update(entity);
+				await _writeContext.SaveChangesAsync();
 				return entity;
 			}
 			catch (Exception ex)
@@ -71,7 +77,9 @@ namespace AntonellaEvents.Infra.Data.Repository
 		{
 			try
 			{
-				return await _dbSet.Where(a => a.Id == id && a.Active ).FirstOrDefaultAsync();
+				return await _readDbSet
+					.Where(a => a.Id == id && a.Active)
+					.FirstOrDefaultAsync();
 			}
 			catch (Exception ex)
 			{
@@ -83,7 +91,7 @@ namespace AntonellaEvents.Infra.Data.Repository
 		{
 			try
 			{
-				var query = _dbSet.AsNoTracking().AsQueryable();
+				var query = _readDbSet.AsNoTracking().AsQueryable();
 				return await PaginationHelper.CreateAsync<T>(query, pageNumber, pageSize);
 			}
 			catch (Exception ex)
@@ -96,7 +104,7 @@ namespace AntonellaEvents.Infra.Data.Repository
 		{
 			try
 			{
-				return await _dbSet.CountAsync();
+				return await _readDbSet.CountAsync();
 			}
 			catch (Exception ex)
 			{

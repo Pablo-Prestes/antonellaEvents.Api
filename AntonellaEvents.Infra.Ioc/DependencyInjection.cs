@@ -14,14 +14,22 @@ namespace AntonellaEvents.Infra.IoC
 		{
 
 			#region Conexão com a database
-			services.AddDbContext<AntonellaEventsContext>(options =>
+
+			services.AddDbContext<AntonellaEventsWriteContext>(options =>
 					options.UseMySql(
-						configuration.GetConnectionString("DefaultConnection")!,
+						configuration.GetConnectionString("AntonellaEventsWriteConnection")!,
 						new MySqlServerVersion(new Version(8, 0, 21)),
-						b => b.MigrationsAssembly(typeof(AntonellaEventsContext).Assembly.FullName)
+						b => b.MigrationsAssembly(typeof(AntonellaEventsWriteContext).Assembly.FullName)
 					)
 			);
 
+			services.AddDbContext<AntonellaEventsReadContext>(options =>
+					options.UseMySql(
+						configuration.GetConnectionString("AntonellaEventsReadConnection")!,
+						new MySqlServerVersion(new Version(8, 0, 21)),
+						b => b.MigrationsAssembly(typeof(AntonellaEventsReadContext).Assembly.FullName)
+					)
+			);
 			#endregion
 
 			#region Services
