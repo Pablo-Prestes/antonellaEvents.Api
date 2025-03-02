@@ -15,17 +15,15 @@ namespace AntonellaEvents.Infra.Data.EntitiesConfiguration
 				.HasMaxLength(100);
 
 			builder.Property(e => e.Description)
-				.IsRequired();
+				.IsRequired()
+				.HasMaxLength(500);
 
 			builder.Property(e => e.StartDate)
 				.IsRequired();
 
 			builder.Property(e => e.EndDate)
 				.IsRequired();
-
-			builder.Property(e => e.Location)
-				.IsRequired()
-				.HasMaxLength(100);
+		
 
 			builder.Property(e => e.IsPublic)
 				.IsRequired();

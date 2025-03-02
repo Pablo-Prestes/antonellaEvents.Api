@@ -25,16 +25,11 @@ namespace AntonellaEvents.Infra.Data.EntitiesConfiguration
 				.HasMaxLength(5);
 
 			builder.Property(c => c.Complement)
-				.IsRequired()
 				.HasMaxLength(100);
 
 			builder.Property(c => c.City)
 				.IsRequired()
 				.HasMaxLength(40);
-
-			builder.Property(s => s.State)
-			.IsRequired()
-			.HasMaxLength(40);
 
 			builder.HasQueryFilter(e => e.Active);
 		}
