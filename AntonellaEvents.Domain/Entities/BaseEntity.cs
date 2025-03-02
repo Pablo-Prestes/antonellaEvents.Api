@@ -8,6 +8,7 @@ namespace AntonellaEvents.Domain.Entities
 		[Key]
 		public int Id { get; set; }
 
+		[MaxLength(40)]
 		public Guid Uuid { get; protected set; } 
 
 		[Required]
