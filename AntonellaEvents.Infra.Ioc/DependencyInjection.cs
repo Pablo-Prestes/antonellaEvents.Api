@@ -1,4 +1,5 @@
-﻿using AntonellaEvents.Domain.Interfaces;
+﻿using AntonellaEvents.Application.Helpers.Mappings;
+using AntonellaEvents.Domain.Interfaces;
 using AntonellaEvents.Infra.Data.Context;
 using AntonellaEvents.Infra.Data.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -39,6 +40,9 @@ namespace AntonellaEvents.Infra.IoC
 			services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 			#endregion
 
+			#region AutoMapper
+			services.AddAutoMapper(typeof(MappingsEntitiesOrDtos));
+			#endregion
 			return services;
 		}
 	}
