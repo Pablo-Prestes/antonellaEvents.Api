@@ -12,7 +12,6 @@ namespace AntonellaEvents.Domain.Entities
 		public bool IsPublic { get; private set; }
 		public Address? Address { get; private set; }
 		public int AddressId { get; private set; }
-
 		public Events(string name, string description, DateTime startDate, DateTime endDate, bool isPublic, int addressId)
 		{
 			ValidateDomain(name, description, startDate, endDate, addressId);
@@ -39,6 +38,10 @@ namespace AntonellaEvents.Domain.Entities
 			DomainExceptionValidation.When(startDate < DateTime.Now.AddHours(8), "O evento deve ser criado com pelo menos 8 horas de antecedência!");
 
 			DomainExceptionValidation.When(addressId <= 0, "O endereço do evento é obrigatório!");
+		}
+		public void SetAddress(int adressId)
+		{
+			AddressId = adressId;
 		}
 	}
 }

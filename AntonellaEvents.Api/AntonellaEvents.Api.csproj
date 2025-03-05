@@ -14,8 +14,4 @@
     <ProjectReference Include="..\AntonellaEvents.Infra.Ioc\AntonellaEvents.Infra.IoC.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>
