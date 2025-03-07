@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using AntonellaEvents.Infra.Data.Read.Models;
-using AntonellaEvents.Infra.Data.Read.EntitiesConfiguration;
 
 namespace AntonellaEvents.Infra.Data.Context
 {

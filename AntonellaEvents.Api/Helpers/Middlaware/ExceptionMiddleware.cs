@@ -1,8 +1,8 @@
 ﻿using System.Net;
 using System.Text.Json;
-using ADoJob.Domain.Responses;
+using AntonellaEvents.Domain.Responses;
 
-namespace Bwise.API.Middleware
+namespace AntonellaEvents.API.Middleware
 {
 	public class ExceptionMiddleware
 	{

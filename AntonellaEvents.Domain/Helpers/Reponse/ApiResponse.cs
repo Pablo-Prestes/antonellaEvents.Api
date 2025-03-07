@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ADoJob.Domain.Responses
+namespace AntonellaEvents.Domain.Responses
 {
 	public class ApiResponse<T>
 	{

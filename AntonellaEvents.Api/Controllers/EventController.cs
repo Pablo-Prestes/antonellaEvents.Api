@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AntonellaEvents.Application.Commands.Events;
-using ADoJob.Domain.Responses;
+using AntonellaEvents.Domain.Responses;
 
 namespace AntonellaEvents.Api.Controllers
 {

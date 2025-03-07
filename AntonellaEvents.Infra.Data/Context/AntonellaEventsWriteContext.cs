@@ -1,5 +1,4 @@
 ﻿using AntonellaEvents.Domain.Entities;
-using AntonellaEvents.Infra.Data.EntitiesConfiguration;
 using Microsoft.EntityFrameworkCore;
 
 namespace AntonellaEvents.Infra.Data.Context

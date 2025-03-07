@@ -1,4 +1,4 @@
-﻿namespace ADoJob.Domain.Validation
+﻿namespace AntonellaEvents.Domain.Validation
 {
 	public class DomainExceptionValidation : Exception
 	{

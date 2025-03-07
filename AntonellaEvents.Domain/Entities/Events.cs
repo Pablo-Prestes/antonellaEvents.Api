@@ -1,4 +1,4 @@
-﻿using ADoJob.Domain.Validation;
+﻿using AntonellaEvents.Domain.Validation;
 using System;
 
 namespace AntonellaEvents.Domain.Entities

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace ADoJob.Infra.IoC
+namespace AntonellaEvents.Infra.IoC
 {
 	public static class DependencyInjectionSwagger
 	{

@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using ADoJob.Domain.Responses;
+using AntonellaEvents.Domain.Responses;
 using AntonellaEvents.Application.Dtos.Adress;
 using AntonellaEvents.Application.Dtos.Event;
 
