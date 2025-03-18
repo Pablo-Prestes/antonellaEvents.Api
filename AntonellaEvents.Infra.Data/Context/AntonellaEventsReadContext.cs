@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using AntonellaEvents.Infra.Data.Read.Models;
+﻿using AntonellaEvents.Domain.Entities.Read;
+using Microsoft.EntityFrameworkCore;
 
 namespace AntonellaEvents.Infra.Data.Context
 {

@@ -1,4 +1,4 @@
-﻿using AntonellaEvents.Domain.Entities.EntitiesWrite;
+﻿using AntonellaEvents.Domain.Entities.Write;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -9,7 +9,7 @@ namespace AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfiguration
 		public void Configure(EntityTypeBuilder<Events> builder)
 		{
 			builder.HasKey(e => e.Id);
-	
+
 			builder.Property(e => e.Name)
 				.IsRequired()
 				.HasMaxLength(100);
@@ -23,13 +23,13 @@ namespace AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfiguration
 
 			builder.Property(e => e.EndDate)
 				.IsRequired();
-		
+
 
 			builder.Property(e => e.IsPublic)
 				.IsRequired();
 
 			builder.HasOne(e => e.Address)
-				.WithOne(a => a.Events) 
+				.WithOne(a => a.Events)
 				.HasForeignKey<Events>(e => e.AddressId)
 				.IsRequired();
 

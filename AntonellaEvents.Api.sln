@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Infra.IoC",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Infra.Messaging", "AntonellaEvents.Infra.Messaging\AntonellaEvents.Infra.Messaging.csproj", "{6CFD5808-68A8-472F-8779-FE4005EDF09F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonellaEvents.Contracts", "AntonellaEvents.Contracts\AntonellaEvents.Contracts.csproj", "{3CF546EA-B7DA-4258-859D-6712A6FA569F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{6CFD5808-68A8-472F-8779-FE4005EDF09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CFD5808-68A8-472F-8779-FE4005EDF09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CFD5808-68A8-472F-8779-FE4005EDF09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF546EA-B7DA-4258-859D-6712A6FA569F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF546EA-B7DA-4258-859D-6712A6FA569F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF546EA-B7DA-4258-859D-6712A6FA569F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF546EA-B7DA-4258-859D-6712A6FA569F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

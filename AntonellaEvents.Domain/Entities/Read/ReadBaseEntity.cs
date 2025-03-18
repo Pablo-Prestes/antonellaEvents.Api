@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AntonellaEvents.Infra.Data.Read.Models
+namespace AntonellaEvents.Domain.Entities.Read
 {
-    public class ReadBaseEntity
+	public class ReadBaseEntity
     {
 		[Key]
 		public int Id { get; set; }

@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AntonellaEvents.Domain.Entities.Read;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using AntonellaEvents.Infra.Data.Read.Models;
 
 namespace AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfigurationRead
 {

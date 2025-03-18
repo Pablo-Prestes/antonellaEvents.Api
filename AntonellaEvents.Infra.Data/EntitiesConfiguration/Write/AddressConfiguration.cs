@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using AntonellaEvents.Domain.Entities.EntitiesWrite;
+using AntonellaEvents.Domain.Entities.Write;
 
 namespace AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfigurationWrite
 {

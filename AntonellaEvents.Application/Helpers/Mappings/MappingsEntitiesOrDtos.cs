@@ -1,6 +1,6 @@
 ﻿using AntonellaEvents.Application.Dtos.Adress;
 using AntonellaEvents.Application.Dtos.Event;
-using AntonellaEvents.Domain.Entities.EntitiesWrite;
+using AntonellaEvents.Domain.Entities.Write;
 using AutoMapper;
 
 namespace AntonellaEvents.Application.Helpers.Mappings

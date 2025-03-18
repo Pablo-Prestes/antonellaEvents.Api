@@ -1,6 +1,6 @@
 ﻿using AntonellaEvents.Domain.Validation;
 
-namespace AntonellaEvents.Domain.Entities.EntitiesWrite
+namespace AntonellaEvents.Domain.Entities.Write
 {
 	public class Events : BaseEntity
 	{

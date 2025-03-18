@@ -1,4 +1,4 @@
-﻿using AntonellaEvents.Domain.Entities.EntitiesWrite;
+﻿using AntonellaEvents.Domain.Entities.Write;
 using Microsoft.EntityFrameworkCore;
 
 namespace AntonellaEvents.Infra.Data.Context

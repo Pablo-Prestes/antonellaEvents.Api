@@ -12,7 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Consumers\" />
+    <ProjectReference Include="..\AntonellaEvents.Contracts\AntonellaEvents.Contracts.csproj" />
+    <ProjectReference Include="..\AntonellaEvents.Domain\AntonellaEvents.Domain.csproj" />
   </ItemGroup>
 
 </Project>

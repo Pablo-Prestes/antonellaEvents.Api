@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AntonellaEvents.Contracts\AntonellaEvents.Contracts.csproj" />
     <ProjectReference Include="..\AntonellaEvents.Domain\AntonellaEvents.Domain.csproj" />
     <ProjectReference Include="..\AntonellaEvents.Infra.Messaging\AntonellaEvents.Infra.Messaging.csproj" />
   </ItemGroup>
