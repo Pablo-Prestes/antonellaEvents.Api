@@ -5,9 +5,9 @@ using AntonellaEvents.Application.Dtos.Event;
 
 namespace AntonellaEvents.Application.Commands.Events
 {
-	public class CreateEventCommand : IRequest<ApiResponse<Guid>>
+	public class CreateEventCommand : IRequest<ApiResponse<EventResponseDto>>
 	{
-		public EventResponseDto eventResponseDto { get; set; }
-		public AdressResponseDto adressResponseDto { get; set; }
+		public EventRequestDto eventRequestDto { get; set; }
+		public AdressRequestDto adressRequestDto { get; set; }
 	}
 }

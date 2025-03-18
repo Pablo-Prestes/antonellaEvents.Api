@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AntonellaEvents.Domain.Entities
+namespace AntonellaEvents.Domain.Entities.EntitiesWrite
 {
 	public abstract class BaseEntity
 	{

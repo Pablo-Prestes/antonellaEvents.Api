@@ -43,6 +43,10 @@ namespace AntonellaEvents.Infra.IoC
 			#region AutoMapper
 			services.AddAutoMapper(typeof(MappingsEntitiesOrDtos));
 			#endregion
+
+			#region Cqrs
+			// services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AntonellaEvents).Assembly));
+			#endregion
 			return services;
 		}
 	}

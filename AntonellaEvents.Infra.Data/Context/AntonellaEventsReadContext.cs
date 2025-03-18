@@ -15,7 +15,7 @@ namespace AntonellaEvents.Infra.Data.Context
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(
-			typeof(AntonellaEventsReadContext).Assembly, t => t.Namespace == "AntonellaEvents.Infra.Data.Read.ReadEntitiesConfiguration");
+			typeof(AntonellaEventsReadContext).Assembly, t => t.Namespace == "AntonellaEvents.Infra.Data.Read.EntitiesConfiguration.EntitiesConfigurationRead");
 
 			base.OnModelCreating(modelBuilder);
 		}

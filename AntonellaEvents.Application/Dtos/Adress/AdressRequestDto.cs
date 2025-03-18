@@ -1,8 +1,7 @@
 ﻿namespace AntonellaEvents.Application.Dtos.Adress
 {
-    public class AdressResponseDto
+    public class AdressRequestDto
     {
-		public int Id { get; set; }
 		public string ZipCode { get; set; }
 		public string Street { get; set; }
 		public string Number { get; set; }

@@ -1,4 +1,4 @@
-﻿using AntonellaEvents.Domain.Entities;
+﻿using AntonellaEvents.Domain.Entities.EntitiesWrite;
 using Microsoft.EntityFrameworkCore;
 
 namespace AntonellaEvents.Infra.Data.Context
@@ -13,7 +13,7 @@ namespace AntonellaEvents.Infra.Data.Context
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.ApplyConfigurationsFromAssembly(
-			typeof(AntonellaEventsWriteContext).Assembly, t => t.Namespace == "AntonellaEvents.Infra.Data.EntitiesConfiguration");
+			typeof(AntonellaEventsWriteContext).Assembly, t => t.Namespace == "AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfigurationWrite");
 			base.OnModelCreating(modelBuilder);
 		}
 	}

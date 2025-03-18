@@ -1,8 +1,8 @@
-﻿using AntonellaEvents.Domain.Entities;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
+using AntonellaEvents.Domain.Entities.EntitiesWrite;
 
-namespace AntonellaEvents.Infra.Data.EntitiesConfiguration
+namespace AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfigurationWrite
 {
 	internal class AddresConfiguration : IEntityTypeConfiguration<Address>
 	{

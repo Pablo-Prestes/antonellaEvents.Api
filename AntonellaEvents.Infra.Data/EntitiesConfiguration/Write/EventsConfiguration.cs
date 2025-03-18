@@ -1,8 +1,8 @@
-﻿using AntonellaEvents.Domain.Entities;
+﻿using AntonellaEvents.Domain.Entities.EntitiesWrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace AntonellaEvents.Infra.Data.EntitiesConfiguration
+namespace AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfigurationWrite
 {
 	internal class EventsConfiguration : IEntityTypeConfiguration<Events>
 	{

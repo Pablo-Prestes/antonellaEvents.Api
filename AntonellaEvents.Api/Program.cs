@@ -1,18 +1,24 @@
-using ADoJob.Infra.IoC;
+using  AntonellaEvents.Infra.IoC;
 using AntonellaEvents.Infra.Data.Context;
-using AntonellaEvents.Infra.IoC;
 using Microsoft.EntityFrameworkCore;
+using AntonellaEvents.Infra.Messaging.Connection;
+using AntonellaEvents.Application.Handlers.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddInsfrastructure(builder.Configuration);
 builder.Services.AddInfrastructureSwagger();
+builder.Services.AddRabbitMqService();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+builder.Services.AddMediatR(cfg =>
+	cfg.RegisterServicesFromAssembly(typeof(CreateEventCommandHandler).Assembly)
+);
 
 var app = builder.Build();
 

@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Tasks;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using AntonellaEvents.Application.Commands.Events;
 using AntonellaEvents.Domain.Responses;
+using AntonellaEvents.Application.Dtos.Event;
 
 namespace AntonellaEvents.Api.Controllers
 {
@@ -21,7 +20,7 @@ namespace AntonellaEvents.Api.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Create(CreateEventCommand createEventCommand)
 		{
-			ApiResponse<Guid> response = await _mediator.Send(createEventCommand);
+			ApiResponse<EventResponseDto>? response = await _mediator.Send(createEventCommand);
 
 			return StatusCode(response.StatusCode, response);
 		}

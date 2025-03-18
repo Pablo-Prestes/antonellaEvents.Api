@@ -1,4 +1,4 @@
-﻿using AntonellaEvents.Domain.Entities;
+﻿using AntonellaEvents.Domain.Entities.EntitiesWrite;
 using AntonellaEvents.Domain.Helpers.Pagination;
 using AntonellaEvents.Domain.Interfaces;
 using AntonellaEvents.Infra.Data.Context;

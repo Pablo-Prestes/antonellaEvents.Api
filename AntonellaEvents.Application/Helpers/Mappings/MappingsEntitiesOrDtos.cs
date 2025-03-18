@@ -1,20 +1,27 @@
 ﻿using AntonellaEvents.Application.Dtos.Adress;
 using AntonellaEvents.Application.Dtos.Event;
-using AntonellaEvents.Domain.Entities;
+using AntonellaEvents.Domain.Entities.EntitiesWrite;
 using AutoMapper;
 
 namespace AntonellaEvents.Application.Helpers.Mappings
 {
-    public class MappingsEntitiesOrDtos : Profile
+	public class MappingsEntitiesOrDtos : Profile
 	{
-        public MappingsEntitiesOrDtos() 
-        {
-			#region Events
-			CreateMap<EventResponseDto, Events>().ReverseMap();
+		public MappingsEntitiesOrDtos()
+		{
+			#region Addres
+			CreateMap<Address, AdressRequestDto>().ReverseMap();
+			CreateMap<Address, AdressResponseDto>().ReverseMap();
 			#endregion
 
-			#region Adress
-			CreateMap<AdressResponseDto, Address>().ReverseMap();
+			#region Event
+			CreateMap<EventRequestDto, Events>()
+			.ConstructUsing((src, context) => {
+				int addressId = (int)context.Items["AddressId"];
+				return new Events(src.Name, src.Description, src.StartDate, src.EndDate, src.IsPublic, addressId);
+			});
+
+			CreateMap<Events, EventResponseDto>().ReverseMap();
 			#endregion
 		}
 	}

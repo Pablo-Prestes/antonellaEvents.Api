@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AntonellaEvents.Domain\AntonellaEvents.Domain.csproj" />
+    <ProjectReference Include="..\AntonellaEvents.Infra.Messaging\AntonellaEvents.Infra.Messaging.csproj" />
   </ItemGroup>
 
 </Project>

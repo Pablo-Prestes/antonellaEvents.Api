@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using AntonellaEvents.Infra.Data.Read.Models;
 
-namespace AntonellaEvents.Infra.Data.Read.EntitiesConfiguration
+namespace AntonellaEvents.Infra.Data.EntitiesConfiguration.EntitiesConfigurationRead
 {
 	public class EventReadModelConfiguration : IEntityTypeConfiguration<EventReadModel>
 	{
