@@ -31,6 +31,7 @@ Este projeto foi desenvolvido para testar alguns conhecimentos em tempo livre ut
 
 2. **Conceitos**:
   - Clean Architeture
+  - Docker
   - Solid
   - Clean Code
   - Princípios de DDD
