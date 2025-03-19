@@ -1,6 +1,6 @@
 # Antonella Events Api
 
-Este projeto foi desenvolvido para testar alguns conhecimentos em tempo livre utilizando(Finalização será demorada.) **.NET 8**, **MySql**, **RabbitMq**, além de diversas bibliotecas para auxiliar na criação, validação, migração e testes da aplicação.
+Este projeto foi desenvolvido para testar alguns conhecimentos em tempo livre utilizando(Finalização será demorada.) **.NET 8**, **MySql**, **RabbitMq** e docker para containerizar tudo, além de diversas bibliotecas para auxiliar na criação, validação, migração e testes da aplicação.
 ---
 ## O projeto irá conter as seguintes funcionalidades
 
